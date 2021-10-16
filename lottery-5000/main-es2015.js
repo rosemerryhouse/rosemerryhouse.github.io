@@ -378,19 +378,28 @@ let LotteryComponent = class LotteryComponent {
         this._lotterService = _lotterService;
         this.lotPersons = [];
         this.winnerArray = [];
+        this.showNoWinner = false;
+        this.isLoading = false;
     }
     ngOnInit() {
         this._lotterService.sendPerson$.subscribe((res) => {
             this.lotPersons = [];
             if (res && res.length > 0) {
-                console.log('sendPerson lottery', res);
+                this.changeLoading(true, 40);
+                // console.log('sendPerson lottery', res);
                 this.lotPersons = res;
                 this.findWinner();
             }
             else {
                 this.winnerArray = [];
+                this.isLoading = false;
+                this.showNoWinner = false;
+                this.changeLoading(false, 0);
             }
         });
+    }
+    changeLoading(val, time) {
+        setTimeout(() => { this.isLoading = val; }, time);
     }
     findWinner() {
         this.winnerArray = [];
@@ -410,6 +419,13 @@ let LotteryComponent = class LotteryComponent {
             }
         });
         // console.log('winner',this.winnerArray);
+        if (this.winnerArray.length === 0) {
+            this.showNoWinner = true;
+        }
+        else {
+            this.showNoWinner = false;
+        }
+        this.changeLoading(false, 400);
     }
 };
 LotteryComponent.ctorParameters = () => [
@@ -655,7 +671,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"formGroup\" (ngSubmit)=\"add()\">\n  <div class=\"flex flex-col items-center justify-center my-2 add-form sm:flex-col md:flex-row lg:flex-row xl:flex-row\">\n    <div class=\"w-auto mx-1 p-1 inline-block\">\n      <input\n        placeholder=\"你的姓名\"\n        [formControl]=\"yourNameControl\"\n        class=\"\n          pl-2\n          border-2 border-gray-200\n          h-8\n          leading-8\n          rounded\n          bg-gray-100\n          text-gray-800\n        \"\n        type=\"text\"\n      />\n    </div>\n\n    <div class=\"w-auto mx-1 p-1 inline-block\">\n      <input\n        placeholder=\"身份證至少後三碼\"\n        class=\"\n          pl-2\n          border-2 border-gray-200\n          h-8\n          leading-8\n          rounded\n          bg-gray-100\n          text-gray-800\n        \"\n        [formControl]=\"yourIdControl\"\n        type=\"text\"\n      />\n    </div>\n\n    <div\n      class=\"\n        mx-1\n        inline-block\n        flex flex-wrap\n        w-auto\n        justify-center\n        items-center\n      \"\n    >\n      <button\n        class=\"submitBTN inline-block px-2 mx-2 h-8 leading-8 cursor-pointer\"\n        type=\"submit\"\n        [disabled]=\"formGroup.invalid\"\n        [ngClass]=\"{'disabled': formGroup.invalid}\"\n      >\n        新增人員\n      </button>\n\n      <div\n        (click)=\"clearAll()\"\n        class=\"clearBtn h-8 leading-8 inline-block cursor-pointer px-2 mx-2\"\n      >\n        清除全部人員\n      </div>\n    </div>\n  </div>\n</form>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"formGroup\" (ngSubmit)=\"add()\">\n  <div class=\"flex flex-col items-center justify-center my-2 add-form sm:flex-col md:flex-row lg:flex-row xl:flex-row\">\n    <div class=\"inline-block w-auto p-1 mx-1\">\n      <input\n        placeholder=\"你的姓名/稱呼\"\n        [formControl]=\"yourNameControl\"\n        class=\"h-8 pl-2 leading-8 text-gray-800 bg-gray-100 border-2 border-gray-200 rounded \"\n        type=\"text\"\n      />\n    </div>\n\n    <div class=\"inline-block w-auto p-1 mx-1\">\n      <input\n        placeholder=\"身份證至少後三碼\"\n        class=\"h-8 pl-2 leading-8 text-gray-800 bg-gray-100 border-2 border-gray-200 rounded \"\n        [formControl]=\"yourIdControl\"\n        type=\"text\"\n      />\n    </div>\n\n    <div\n      class=\"flex flex-wrap items-center justify-center inline-block w-auto mx-1 \"\n    >\n      <button\n        class=\"inline-block h-8 px-2 mx-2 leading-8 cursor-pointer submitBTN\"\n        type=\"submit\"\n        [disabled]=\"formGroup.invalid\"\n        [ngClass]=\"{'disabled': formGroup.invalid}\"\n      >\n        新增對獎人員\n      </button>\n\n      <div\n        (click)=\"clearAll()\"\n        class=\"inline-block h-8 px-2 mx-2 leading-8 cursor-pointer clearBtn\"\n      >\n        清除全部人員\n      </div>\n    </div>\n  </div>\n</form>\n");
 
 /***/ }),
 
@@ -667,7 +683,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div\n  class=\"flex items-center justify-between px-2 h-8 bg-gray-100 text-green-600 w-full\"\n>\n  <div class=\"flex flex-wrap items-center\">\n    <i class=\"fas fa-money-bill-wave\"></i>\n    <span class=\"mx-2\"> 加碼券 </span>\n  </div>\n\n  <div class=\"flex items-end h-8\">\n    <div class=\"h-6 leading-6 bg-white w-16 text-center border-gray-300 border-1 \">Week 1</div>\n  </div></div>\n\n<div class=\"w-full flex flex-col\">\n\n  <div>\n    <app-add-persion></app-add-persion>\n  \n  </div>\n \n  <div class=\"flex flex-wrap justify-center items-center w-full\">\n     <app-person-item *ngFor=\"let p of lotPersons\" [person]=\"p\"></app-person-item>\n  </div>\n\n  <div class=\"container m-4\">\n\n  <div class=\"grid xl:grid-cols-4 xl:gap-4  lg:grid-cols-3 lg:gap-4  md:grid-cols-3 md:gap-2 sm:grid-cols-2 sm:gap-2\"> \n      <div *ngFor=\"let item of lottDataArray\">\n        <app-lottery [lotteryData]=\"item\"> </app-lottery>\n      </div>\n  </div>\n\n</div>\n\n\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div\n  class=\"flex items-center justify-between w-full h-8 px-2 text-green-600 bg-gray-100\"\n>\n  <div class=\"flex flex-wrap items-center\">\n    <i class=\"fas fa-money-bill-wave\"></i>\n    <span class=\"mx-2 text-lg\"> 加碼券 </span>\n    <span class=\"mx-2 text-sm\"> (多人對獎) </span>\n  </div>\n\n  <div class=\"flex items-end h-8\">\n    <div class=\"w-16 h-6 leading-6 text-center bg-white border-gray-300 border-1 \">Week 1</div>\n  </div></div>\n\n<div class=\"flex flex-col w-full\">\n\n  <div>\n    <app-add-persion></app-add-persion>\n  \n  </div>\n \n  <div class=\"flex flex-wrap items-center justify-center w-full\">\n     <div class=\"font-bold text-blue-500\" *ngIf=\"lotPersons.length\"> 對獎人員 <i class=\"fas fa-hand-point-right \"></i> </div>\n     <app-person-item *ngFor=\"let p of lotPersons\" [person]=\"p\"></app-person-item>\n  </div>\n\n  <div class=\"container p-2 m-0\">\n\n  <div class=\"grid xl:grid-cols-4 xl:gap-4 lg:grid-cols-3 lg:gap-4 md:grid-cols-3 md:gap-2 sm:grid-cols-2 sm:gap-2\"> \n      <div *ngFor=\"let item of lottDataArray\">\n        <app-lottery [lotteryData]=\"item\"> </app-lottery>\n      </div>\n  </div>\n\n</div>\n\n\n</div>\n\n");
 
 /***/ }),
 
@@ -679,7 +695,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div\n  class=\"\n    flex flex-col\n    w-full\n    bg-white\n    p-3\n    m-5\n    rounded\n    border-2 border-gray-200\n    lotter-block\n    relative\n  \"\n>\n\n<div class=\"wrap\" *ngIf=\"winnerArray && winnerArray.length > 0\">\n   <span class=\"ribbon6\"> 中獎 :{{lotteryData.price}}</span>\n</div>\n\n\n  <!-- title  -->\n  <div class=\"ml-2 flex justify-between\">\n    <div class=\"font-bold\">{{ lotteryData.title }}</div>\n    <div class=\"font-base font-normal mr-2 text-gray-400\">\n      {{ lotteryData.lotDate | date: 'yyyy/MM/dd' }}\n    </div>\n  </div>\n\n  <div class=\"flex flex-wrap w-full mt-3\">\n    \n    <app-num *ngFor=\"let i of lotteryData.lotNumber\" [lotNo]=\"i\"></app-num>\n  \n  </div>\n\n  <div class=\"flex flex-wrap w-full m-5 border-gray-200 border-1\">\n    <app-winner *ngFor=\"let n of winnerArray\" [winner]=\"n\"></app-winner>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div\n  class=\"relative flex flex-col w-full p-1 mb-4 bg-white border-2 border-gray-200 rounded lotter-block\"\n>\n\n<div class=\"wrap\" *ngIf=\"winnerArray && winnerArray.length > 0\">\n   <span class=\"ribbon6\"> 中獎 :{{lotteryData.price}}</span>\n</div>\n\n\n  <!-- title  -->\n  <div class=\"flex justify-between ml-2\">\n    <div class=\"text-xl font-bold\">{{ lotteryData.title }}</div>\n    <div class=\"mr-2 text-xs font-normal text-gray-300\">\n      {{ lotteryData.lotDate | date: 'yyyy/MM/dd' }}\n    </div>\n  </div>\n\n  <div class=\"flex flex-wrap w-full mt-3\">\n    \n    <app-num *ngFor=\"let i of lotteryData.lotNumber\" [lotNo]=\"i\"></app-num>\n  \n  </div>\n\n  <ng-container *ngIf=\"isLoading; else showWinnder\">\n      <div class=\"flex items-center justify-center mt-4\">\n          <div class=\"w-8 h-8 border-b-2 border-gray-400 rounded-full animate-spin\"></div>\n          <div class=\"ml-2 text-sm text-gray-600\">對獎中…</div>\n      </div>\n  </ng-container>\n\n   <ng-template #showWinnder>\n      <div class=\"flex flex-wrap w-full m-5 border-gray-200 border-1\" *ngIf=\"winnerArray.length && !showNoWinner\">\n        <app-winner *ngFor=\"let n of winnerArray\" [winner]=\"n\"></app-winner>\n      </div>\n\n      <div class=\"flex flex-wrap w-full m-5 text-orange-600 border-gray-200 border-1\" *ngIf=\"winnerArray.length == 0 && showNoWinner\">\n        <i class=\"mr-4 text-lg text-gray-400 far fa-sad-tear\"></i>  無人中獎\n      </div>\n   </ng-template>\n\n\n</div>\n");
 
 /***/ }),
 
@@ -691,7 +707,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"inline-block w-auto px-3 bg-white text-red-500 font-bold rounded-md m-1 border-2 h-10 leading-10\">\n  {{ lotNo }}\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"inline-block w-auto h-8 px-2 m-1 font-bold leading-8 text-red-300 bg-white border-2 border-gray-200 rounded-md\">\n  {{ lotNo }}\n</div>\n");
 
 /***/ }),
 
@@ -703,7 +719,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"inline-block rounded-2xl bg-blue-100 text-blue-800 px-3 py-1 mx-1\">\n  {{person.name}} <span class=\"text-xs text-gray-800 mx-1\">{{person.lastNum}}</span>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"inline-block px-3 py-1 m-1 text-blue-800 bg-blue-100 rounded-2xl\">\n  {{person.name}} <span class=\"mx-1 text-xs text-gray-800\">{{person.lastNum}}</span>\n</div>");
 
 /***/ }),
 
@@ -715,7 +731,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"inline-block w-auto px-2 bg-yellow-100  font-bold text-orange-500  rounded-3xl m-1 border-2 border-yellow-200\">\n<i class=\"fas fa-award text-red-400\"></i>\n{{ winner.name }} \n<span class=\"text-sm text-gray-800 font-base \">({{winner.lastNum}}) </span>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"flex items-center justify-center w-auto px-2 m-1 text-base font-bold text-orange-500 bg-yellow-100 border-2 border-yellow-500 rounded-3xl\">\n<i class=\"mr-2 text-lg text-yellow-400 far fa-smile\"></i>\n{{ winner.name }} \n<span class=\"text-sm text-gray-800 font-base \">({{winner.lastNum}}) </span>\n</div>");
 
 /***/ }),
 
@@ -748,7 +764,7 @@ module.exports = "p {\n  font-family: Lato;\n}\n/*# sourceMappingURL=data:applic
 /***/ (function(module) {
 
 "use strict";
-module.exports = ".lotter-block {\n  min-height: 250px;\n}\n\n.wrap {\n  width: 100%;\n  height: 188px;\n  position: absolute;\n  top: -8px;\n  left: 8px;\n  overflow: hidden;\n}\n\n.wrap:before,\n.wrap:after {\n  content: '';\n  position: absolute;\n}\n\n.wrap:before {\n  width: 40px;\n  height: 8px;\n  right: 60px;\n  background: #857e45;\n  border-radius: 8px 8px 0px 0px;\n}\n\n.wrap:after {\n  width: 8px;\n  height: 49px;\n  right: 0px;\n  top: 53px;\n  background: #857e45;\n  border-radius: 0px 8px 8px 0px;\n}\n\n.ribbon6 {\n  width: 158px;\n  height: 26px;\n  line-height: 26px;\n  position: absolute;\n  top: 30px;\n  right: -50px;\n  z-index: 2;\n  overflow: hidden;\n  transform: rotate(45deg);\n  border: 1px dashed;\n  box-shadow: 0 0 0 3px #c5c33e, 0px 21px 5px -18px rgb(0 0 0 / 60%);\n  background: #f3e567;\n  text-align: left;\n  padding-left: 24px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxvdHRlcnkuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxhQUFhO0VBQ2Isa0JBQWtCO0VBQ2xCLFNBQVM7RUFDVCxTQUFTO0VBQ1QsZ0JBQWdCO0FBQ2xCOztBQUNBOztFQUVFLFdBQVc7RUFDWCxrQkFBa0I7QUFDcEI7O0FBQ0E7RUFDRSxXQUFXO0VBQ1gsV0FBVztFQUNYLFdBQVc7RUFDWCxtQkFBbUI7RUFDbkIsOEJBQThCO0FBQ2hDOztBQUNBO0VBQ0UsVUFBVTtFQUNWLFlBQVk7RUFDWixVQUFVO0VBQ1YsU0FBUztFQUNULG1CQUFtQjtFQUNuQiw4QkFBOEI7QUFDaEM7O0FBQ0E7RUFDRSxZQUFZO0VBQ1osWUFBWTtFQUNaLGlCQUFpQjtFQUNqQixrQkFBa0I7RUFDbEIsU0FBUztFQUNULFlBQVk7RUFDWixVQUFVO0VBQ1YsZ0JBQWdCO0VBRWhCLHdCQUF3QjtFQUN4QixrQkFBa0I7RUFDbEIsa0VBQWtFO0VBQ2xFLG1CQUFtQjtFQUNuQixnQkFBZ0I7RUFDaEIsa0JBQWtCO0FBQ3BCIiwiZmlsZSI6ImxvdHRlcnkuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sb3R0ZXItYmxvY2sge1xuICBtaW4taGVpZ2h0OiAyNTBweDtcbn1cblxuLndyYXAge1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxODhweDtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IC04cHg7XG4gIGxlZnQ6IDhweDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbn1cbi53cmFwOmJlZm9yZSxcbi53cmFwOmFmdGVyIHtcbiAgY29udGVudDogJyc7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbn1cbi53cmFwOmJlZm9yZSB7XG4gIHdpZHRoOiA0MHB4O1xuICBoZWlnaHQ6IDhweDtcbiAgcmlnaHQ6IDYwcHg7XG4gIGJhY2tncm91bmQ6ICM4NTdlNDU7XG4gIGJvcmRlci1yYWRpdXM6IDhweCA4cHggMHB4IDBweDtcbn1cbi53cmFwOmFmdGVyIHtcbiAgd2lkdGg6IDhweDtcbiAgaGVpZ2h0OiA0OXB4O1xuICByaWdodDogMHB4O1xuICB0b3A6IDUzcHg7XG4gIGJhY2tncm91bmQ6ICM4NTdlNDU7XG4gIGJvcmRlci1yYWRpdXM6IDBweCA4cHggOHB4IDBweDtcbn1cbi5yaWJib242IHtcbiAgd2lkdGg6IDE1OHB4O1xuICBoZWlnaHQ6IDI2cHg7XG4gIGxpbmUtaGVpZ2h0OiAyNnB4O1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMzBweDtcbiAgcmlnaHQ6IC01MHB4O1xuICB6LWluZGV4OiAyO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDQ1ZGVnKTtcbiAgdHJhbnNmb3JtOiByb3RhdGUoNDVkZWcpO1xuICBib3JkZXI6IDFweCBkYXNoZWQ7XG4gIGJveC1zaGFkb3c6IDAgMCAwIDNweCAjYzVjMzNlLCAwcHggMjFweCA1cHggLTE4cHggcmdiKDAgMCAwIC8gNjAlKTtcbiAgYmFja2dyb3VuZDogI2YzZTU2NztcbiAgdGV4dC1hbGlnbjogbGVmdDtcbiAgcGFkZGluZy1sZWZ0OiAyNHB4O1xufVxuIl19 */";
+module.exports = ".lotter-block {\n  min-height: 180px;\n}\n\n.wrap {\n  width: 100%;\n  height: 188px;\n  position: absolute;\n  top: -8px;\n  left: 8px;\n  overflow: hidden;\n}\n\n.wrap:before,\n.wrap:after {\n  content: '';\n  position: absolute;\n}\n\n.wrap:before {\n  width: 40px;\n  height: 8px;\n  right: 60px;\n  background: #857e45;\n  border-radius: 8px 8px 0px 0px;\n}\n\n.wrap:after {\n  width: 8px;\n  height: 49px;\n  right: 0px;\n  top: 53px;\n  background: #857e45;\n  border-radius: 0px 8px 8px 0px;\n}\n\n.ribbon6 {\n  width: 158px;\n  height: 26px;\n  line-height: 26px;\n  position: absolute;\n  top: 30px;\n  right: -50px;\n  z-index: 2;\n  overflow: hidden;\n  transform: rotate(45deg);\n  border: 1px dashed;\n  box-shadow: 0 0 0 3px #c5c33e, 0px 21px 5px -18px rgb(0 0 0 / 60%);\n  background: #f3e567;\n  text-align: left;\n  padding-left: 24px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxvdHRlcnkuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxhQUFhO0VBQ2Isa0JBQWtCO0VBQ2xCLFNBQVM7RUFDVCxTQUFTO0VBQ1QsZ0JBQWdCO0FBQ2xCOztBQUNBOztFQUVFLFdBQVc7RUFDWCxrQkFBa0I7QUFDcEI7O0FBQ0E7RUFDRSxXQUFXO0VBQ1gsV0FBVztFQUNYLFdBQVc7RUFDWCxtQkFBbUI7RUFDbkIsOEJBQThCO0FBQ2hDOztBQUNBO0VBQ0UsVUFBVTtFQUNWLFlBQVk7RUFDWixVQUFVO0VBQ1YsU0FBUztFQUNULG1CQUFtQjtFQUNuQiw4QkFBOEI7QUFDaEM7O0FBQ0E7RUFDRSxZQUFZO0VBQ1osWUFBWTtFQUNaLGlCQUFpQjtFQUNqQixrQkFBa0I7RUFDbEIsU0FBUztFQUNULFlBQVk7RUFDWixVQUFVO0VBQ1YsZ0JBQWdCO0VBRWhCLHdCQUF3QjtFQUN4QixrQkFBa0I7RUFDbEIsa0VBQWtFO0VBQ2xFLG1CQUFtQjtFQUNuQixnQkFBZ0I7RUFDaEIsa0JBQWtCO0FBQ3BCIiwiZmlsZSI6ImxvdHRlcnkuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sb3R0ZXItYmxvY2sge1xuICBtaW4taGVpZ2h0OiAxODBweDtcbn1cblxuLndyYXAge1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxODhweDtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IC04cHg7XG4gIGxlZnQ6IDhweDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbn1cbi53cmFwOmJlZm9yZSxcbi53cmFwOmFmdGVyIHtcbiAgY29udGVudDogJyc7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbn1cbi53cmFwOmJlZm9yZSB7XG4gIHdpZHRoOiA0MHB4O1xuICBoZWlnaHQ6IDhweDtcbiAgcmlnaHQ6IDYwcHg7XG4gIGJhY2tncm91bmQ6ICM4NTdlNDU7XG4gIGJvcmRlci1yYWRpdXM6IDhweCA4cHggMHB4IDBweDtcbn1cbi53cmFwOmFmdGVyIHtcbiAgd2lkdGg6IDhweDtcbiAgaGVpZ2h0OiA0OXB4O1xuICByaWdodDogMHB4O1xuICB0b3A6IDUzcHg7XG4gIGJhY2tncm91bmQ6ICM4NTdlNDU7XG4gIGJvcmRlci1yYWRpdXM6IDBweCA4cHggOHB4IDBweDtcbn1cbi5yaWJib242IHtcbiAgd2lkdGg6IDE1OHB4O1xuICBoZWlnaHQ6IDI2cHg7XG4gIGxpbmUtaGVpZ2h0OiAyNnB4O1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMzBweDtcbiAgcmlnaHQ6IC01MHB4O1xuICB6LWluZGV4OiAyO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDQ1ZGVnKTtcbiAgdHJhbnNmb3JtOiByb3RhdGUoNDVkZWcpO1xuICBib3JkZXI6IDFweCBkYXNoZWQ7XG4gIGJveC1zaGFkb3c6IDAgMCAwIDNweCAjYzVjMzNlLCAwcHggMjFweCA1cHggLTE4cHggcmdiKDAgMCAwIC8gNjAlKTtcbiAgYmFja2dyb3VuZDogI2YzZTU2NztcbiAgdGV4dC1hbGlnbjogbGVmdDtcbiAgcGFkZGluZy1sZWZ0OiAyNHB4O1xufVxuIl19 */";
 
 /***/ }),
 
