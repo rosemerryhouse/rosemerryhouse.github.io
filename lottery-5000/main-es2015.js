@@ -34,7 +34,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "AddPersionComponent": function() { return /* binding */ AddPersionComponent; }
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 3786);
-/* harmony import */ var _C_Users_miao_Documents_GitHub_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_add_persion_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./add-persion.component.html */ 6262);
+/* harmony import */ var _Users_sophia_Documents_Code_project_github_rose_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_add_persion_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./add-persion.component.html */ 6262);
 /* harmony import */ var _add_persion_component_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./add-persion.component.css */ 5794);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 2316);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ 1707);
@@ -94,7 +94,7 @@ AddPersionComponent.ctorParameters = () => [
 AddPersionComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.Component)({
         selector: 'app-add-persion',
-        template: _C_Users_miao_Documents_GitHub_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_add_persion_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        template: _Users_sophia_Documents_Code_project_github_rose_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_add_persion_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
         styles: [_add_persion_component_css__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], AddPersionComponent);
@@ -115,7 +115,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "AppComponent": function() { return /* binding */ AppComponent; }
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 3786);
-/* harmony import */ var _C_Users_miao_Documents_GitHub_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_app_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./app.component.html */ 5158);
+/* harmony import */ var _Users_sophia_Documents_Code_project_github_rose_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_app_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./app.component.html */ 5158);
 /* harmony import */ var _app_component_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component.css */ 934);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 2316);
 /* harmony import */ var _lotter_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lotter.service */ 9200);
@@ -130,8 +130,8 @@ let AppComponent = class AppComponent {
         this.activeTab = 0;
         this.tabs = [
             '第一週',
-            // '第二週', 
-            // '第三週', 
+            '第二週',
+            // '第三週',
             // '第四週'
         ];
         this.lottery = [];
@@ -216,78 +216,50 @@ let AppComponent = class AppComponent {
         this.lottDataArray1 = [
             {
                 title: '國旅券',
-                lotNumber: ['21', '32', '98', '67', '97', '410'],
-                date: '2021,10,12',
+                lotNumber: ['87', '04', '40', '29', '71'],
+                date: '2021,10,19',
                 price: 1000,
             },
             {
                 title: 'i 原券',
-                lotNumber: ['64', '85'],
-                date: '2021,10,12',
+                lotNumber: [],
+                date: '2021,10,19',
                 price: 1000,
             },
             {
                 title: '農遊券',
-                lotNumber: ['89', '32', '54', '597', '453', '152'],
-                date: '2021,10,13',
+                lotNumber: [],
+                date: '2021,10,20',
                 price: 888,
             },
             {
                 title: '樂fun券 (數位)',
-                lotNumber: ['96', '15', '07', '30', '73', '98', '19', '11'],
-                date: '2021,10,12',
+                lotNumber: [],
+                date: '2021,10,20',
                 price: 600,
             },
             {
                 title: '樂fun券 (紙本)',
-                lotNumber: ['39', '37', '23', '36', '79', '08', '14', '75'],
-                date: '2021,10,12',
+                lotNumber: [],
+                date: '2021,10,20',
                 price: 600,
             },
             {
                 title: '動滋券',
-                lotNumber: [
-                    '97',
-                    '13',
-                    '19',
-                    '55',
-                    '71',
-                    '93',
-                    '381',
-                    '734',
-                    '655',
-                    '453',
-                    '985',
-                ],
-                date: '2021,10,13',
+                lotNumber: [],
+                date: '2021,10,21',
                 price: 500,
             },
             {
                 title: '客庄券',
-                lotNumber: ['81', '900'],
-                date: '2021,10,14',
+                lotNumber: [],
+                date: '2021,10,21',
                 price: 500,
             },
             {
                 title: '地方創生券',
-                lotNumber: [
-                    '081',
-                    '105',
-                    '594',
-                    '188',
-                    '089',
-                    '396',
-                    '521',
-                    '467',
-                    '912',
-                    '798',
-                    '358',
-                    '441',
-                    '367',
-                    '941',
-                    '335',
-                ],
-                date: '2021,10,15',
+                lotNumber: [],
+                date: '2021,10,22',
                 price: 500,
             },
         ];
@@ -327,7 +299,7 @@ AppComponent.ctorParameters = () => [
 AppComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.Component)({
         selector: 'my-app',
-        template: _C_Users_miao_Documents_GitHub_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_app_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        template: _Users_sophia_Documents_Code_project_github_rose_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_app_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
         styles: [_app_component_css__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], AppComponent);
@@ -461,7 +433,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "LotteryComponent": function() { return /* binding */ LotteryComponent; }
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 3786);
-/* harmony import */ var _C_Users_miao_Documents_GitHub_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_lottery_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./lottery.component.html */ 9924);
+/* harmony import */ var _Users_sophia_Documents_Code_project_github_rose_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_lottery_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./lottery.component.html */ 9924);
 /* harmony import */ var _lottery_component_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lottery.component.css */ 190);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 2316);
 /* harmony import */ var _lotter_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../lotter.service */ 9200);
@@ -552,7 +524,7 @@ LotteryComponent.propDecorators = {
 LotteryComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.Component)({
         selector: 'app-lottery',
-        template: _C_Users_miao_Documents_GitHub_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_lottery_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        template: _Users_sophia_Documents_Code_project_github_rose_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_lottery_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
         styles: [_lottery_component_css__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], LotteryComponent);
@@ -573,7 +545,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "NumComponent": function() { return /* binding */ NumComponent; }
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 3786);
-/* harmony import */ var _C_Users_miao_Documents_GitHub_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_num_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./num.component.html */ 2296);
+/* harmony import */ var _Users_sophia_Documents_Code_project_github_rose_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_num_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./num.component.html */ 2296);
 /* harmony import */ var _num_component_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./num.component.css */ 9371);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2316);
 
@@ -592,7 +564,7 @@ NumComponent.propDecorators = {
 NumComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.Component)({
         selector: 'app-num',
-        template: _C_Users_miao_Documents_GitHub_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_num_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        template: _Users_sophia_Documents_Code_project_github_rose_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_num_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
         styles: [_num_component_css__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], NumComponent);
@@ -613,7 +585,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "PersonItemComponent": function() { return /* binding */ PersonItemComponent; }
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 3786);
-/* harmony import */ var _C_Users_miao_Documents_GitHub_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_person_item_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./person-item.component.html */ 7660);
+/* harmony import */ var _Users_sophia_Documents_Code_project_github_rose_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_person_item_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./person-item.component.html */ 7660);
 /* harmony import */ var _person_item_component_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./person-item.component.css */ 3296);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2316);
 
@@ -632,7 +604,7 @@ PersonItemComponent.propDecorators = {
 PersonItemComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.Component)({
         selector: 'app-person-item',
-        template: _C_Users_miao_Documents_GitHub_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_person_item_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        template: _Users_sophia_Documents_Code_project_github_rose_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_person_item_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
         styles: [_person_item_component_css__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], PersonItemComponent);
@@ -653,7 +625,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "WinnerComponent": function() { return /* binding */ WinnerComponent; }
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 3786);
-/* harmony import */ var _C_Users_miao_Documents_GitHub_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_winner_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./winner.component.html */ 7628);
+/* harmony import */ var _Users_sophia_Documents_Code_project_github_rose_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_winner_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./winner.component.html */ 7628);
 /* harmony import */ var _winner_component_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./winner.component.css */ 6510);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2316);
 
@@ -672,7 +644,7 @@ WinnerComponent.propDecorators = {
 WinnerComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.Component)({
         selector: 'app-winner',
-        template: _C_Users_miao_Documents_GitHub_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_winner_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        template: _Users_sophia_Documents_Code_project_github_rose_lottery5000_node_modules_ngtools_webpack_src_loaders_direct_resource_js_winner_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
         styles: [_winner_component_css__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], WinnerComponent);
@@ -798,7 +770,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"flex items-center justify-between w-full h-8 px-2 text-green-600  my-nav\">\r\n  <div class=\"flex flex-wrap items-center\">\r\n    <i class=\"fas fa-money-bill-wave\"></i>\r\n    <span class=\"mx-2 text-lg\"> 加碼券 </span>\r\n    <span class=\"mx-2 text-sm\"> (多人對獎) </span>\r\n  </div>\r\n\r\n  <div class=\"flex items-end h-8\">\r\n    <!-- <div class=\"w-16 h-6 leading-6 text-center bg-white border-gray-300 border-1 \">Week 1</div> -->\r\n  </div>\r\n</div>\r\n\r\n<div class=\"flex flex-col w-full items-center justify-center\">\r\n\r\n  <div>\r\n    <app-add-persion></app-add-persion>\r\n  </div>\r\n\r\n  <div class=\"m-5 p-2 flex flex-col items-center justify-center  text-center\" *ngIf=\"lotPersons.length\">\r\n    <div class=\"font-bold text-gray-800 w-full mb-2\">\r\n      對獎人員列表  <span  class=\"text-md text-gray-600 font-normal\">: 中獎人員會列於下列各區</span>\r\n      <!-- <i class=\"fas fa-hand-point-right \"></i> -->\r\n    </div>\r\n    <div class=\"container  flex flex-wrap items-center justify-center w-full py-2 rounded mb-2 personList\">\r\n      <app-person-item *ngFor=\"let p of lotPersons\" [person]=\"p\"></app-person-item>\r\n    </div>\r\n  </div>\r\n\r\n  <hr class=\"border-b-1 border-gray-400 border-dashed w-10/12\">\r\n\r\n\r\n\r\n\r\n  <div class=\"container p-2 m-0 flex flex-col justify-center items-center text-center\">\r\n    <ul class=\"flex justify-center items-center my-4 w-full inline-block\">\r\n      <ng-container *ngFor=\"let tab of tabs; index as i\">\r\n        <li class=\"cursor-pointer py-2 px-4 text-gray-500 border-b-8 font-bold text-xl\"\r\n          [ngClass]=\"activeTab === i ? 'text-green-500 border-green-500' : ''\" (click)=\"activeTab = i\">\r\n          {{tab}}\r\n        </li>\r\n      </ng-container>\r\n    </ul>\r\n\r\n    <ng-container *ngFor=\"let lott of lottery; index as i\">\r\n        <div *ngIf=\"activeTab === i\"\r\n          class=\"w-full p-4 bg-white rounded-md grid xl:grid-cols-4 xl:gap-4 lg:grid-cols-3 lg:gap-4 md:grid-cols-3 md:gap-2 sm:grid-cols-2 sm:gap-2\">\r\n          <div *ngFor=\"let item of lott\">\r\n            <app-lottery [lotteryData]=\"item\"> </app-lottery>\r\n          </div>\r\n        </div>\r\n    </ng-container>\r\n\r\n\r\n  </div>\r\n\r\n\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"flex items-center justify-between w-full h-8 px-2 text-green-600  my-nav\">\n  <div class=\"flex flex-wrap items-center\">\n    <i class=\"fas fa-money-bill-wave\"></i>\n    <span class=\"mx-2 text-lg\"> 加碼券 </span>\n    <span class=\"mx-2 text-sm\"> (多人對獎) </span>\n  </div>\n\n  <div class=\"flex items-end h-8\">\n    <!-- <div class=\"w-16 h-6 leading-6 text-center bg-white border-gray-300 border-1 \">Week 1</div> -->\n  </div>\n</div>\n\n<div class=\"flex flex-col w-full items-center justify-center\">\n\n  <div>\n    <app-add-persion></app-add-persion>\n  </div>\n\n  <div class=\"m-5 p-2 flex flex-col items-center justify-center  text-center\" *ngIf=\"lotPersons.length\">\n    <div class=\"font-bold text-gray-800 w-full mb-2\">\n      對獎人員列表  <span  class=\"text-md text-gray-600 font-normal\">: 中獎人員會列於下列各區</span>\n      <!-- <i class=\"fas fa-hand-point-right \"></i> -->\n    </div>\n    <div class=\"container  flex flex-wrap items-center justify-center w-full py-2 rounded mb-2 personList\">\n      <app-person-item *ngFor=\"let p of lotPersons\" [person]=\"p\"></app-person-item>\n    </div>\n  </div>\n\n  <hr class=\"border-b-1 border-gray-400 border-dashed w-10/12\">\n\n\n\n\n  <div class=\"container p-2 m-0 flex flex-col justify-center items-center text-center\">\n    <ul class=\"flex justify-center items-center my-4 w-full inline-block\">\n      <ng-container *ngFor=\"let tab of tabs; index as i\">\n        <li class=\"cursor-pointer py-2 px-4 text-gray-500 border-b-8 font-bold text-xl\"\n          [ngClass]=\"activeTab === i ? 'text-green-500 border-green-500' : ''\" (click)=\"activeTab = i\">\n          {{tab}}\n        </li>\n      </ng-container>\n    </ul>\n\n    <ng-container *ngFor=\"let lott of lottery; index as i\">\n        <div *ngIf=\"activeTab === i\"\n          class=\"w-full p-4 bg-white rounded-md grid xl:grid-cols-4 xl:gap-4 lg:grid-cols-3 lg:gap-4 md:grid-cols-3 md:gap-2 sm:grid-cols-2 sm:gap-2\">\n          <div *ngFor=\"let item of lott\">\n            <app-lottery [lotteryData]=\"item\"> </app-lottery>\n          </div>\n        </div>\n    </ng-container>\n\n\n  </div>\n\n\n</div>");
 
 /***/ }),
 
@@ -868,7 +840,7 @@ module.exports = ".clearBtn {\n  background-color: #b2dfdb;\n  border: 2px solid
 /***/ (function(module) {
 
 "use strict";
-module.exports = "p {\r\n  font-family: Lato;\r\n}\r\n.personList {\r\n  background-color: #f3f4f6;\r\n}\r\n.my-nav {\r\n  background-color: #021a13;\r\n}\r\n.container {\r\n  font-family: Lato, arial;\r\n  margin: 0 auto;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsaUJBQWlCO0FBQ25CO0FBQ0E7RUFDRSx5QkFBeUI7QUFDM0I7QUFDQTtFQUNFLHlCQUF5QjtBQUMzQjtBQUVBO0VBQ0Usd0JBQXdCO0VBQ3hCLGNBQWM7QUFDaEIiLCJmaWxlIjoiYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJwIHtcclxuICBmb250LWZhbWlseTogTGF0bztcclxufVxyXG4ucGVyc29uTGlzdCB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2YzZjRmNjtcclxufVxyXG4ubXktbmF2IHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDIxYTEzO1xyXG59XHJcblxyXG4uY29udGFpbmVyIHtcclxuICBmb250LWZhbWlseTogTGF0bywgYXJpYWw7XHJcbiAgbWFyZ2luOiAwIGF1dG87XHJcbn1cclxuIl19 */";
+module.exports = "p {\n  font-family: Lato;\n}\n.personList {\n  background-color: #f3f4f6;\n}\n.my-nav {\n  background-color: #021a13;\n}\n.container {\n  font-family: Lato, arial;\n  margin: 0 auto;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsaUJBQWlCO0FBQ25CO0FBQ0E7RUFDRSx5QkFBeUI7QUFDM0I7QUFDQTtFQUNFLHlCQUF5QjtBQUMzQjtBQUVBO0VBQ0Usd0JBQXdCO0VBQ3hCLGNBQWM7QUFDaEIiLCJmaWxlIjoiYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJwIHtcbiAgZm9udC1mYW1pbHk6IExhdG87XG59XG4ucGVyc29uTGlzdCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmM2Y0ZjY7XG59XG4ubXktbmF2IHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzAyMWExMztcbn1cblxuLmNvbnRhaW5lciB7XG4gIGZvbnQtZmFtaWx5OiBMYXRvLCBhcmlhbDtcbiAgbWFyZ2luOiAwIGF1dG87XG59XG4iXX0= */";
 
 /***/ }),
 
