@@ -9,12 +9,13 @@
 </head>
 
 <body>
-    <video controls autoplay width="400">
+    <video width="500" controls autoplay id="myvideo">
 
         <source src="./promise_sample.webm" type="video/webm">
 
         Sorry, your browser doesn't support embedded videos.
     </video>
+    <script> document.getElementById('myvideo').play();</script>
 </body>
 
 </html>
