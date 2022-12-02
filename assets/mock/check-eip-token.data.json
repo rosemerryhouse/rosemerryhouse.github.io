@@ -1,0 +1,18 @@
+{
+  "header": {
+    "apId": "CRM-LX-CRM-04",
+    "branchId": "00085",
+    "employeeId": "85847",
+    "clientip": "255.255.255.255",
+    "role": "1",
+    "roleCode": "ALL",
+    "txnDateTime": "12345678901234",
+    "returnCode": "0000",
+    "returnDesc": "交易成功"
+  },
+  "body": {
+    "loginId": "85847",
+    "employeeName": "李大同",
+    "trustKey": "abcd-efghijk-123456-abcd"
+  }
+}

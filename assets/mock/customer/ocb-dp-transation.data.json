@@ -1,0 +1,138 @@
+{
+  "header": {
+    "apId": "CRM-LX-CRM-04",
+    "branchId": "00085",
+    "employeeId": "85847",
+    "clientip": "255.255.255.255",
+    "role": "1",
+    "roleCode": "ALL",
+    "txnDateTime": "12345678901234",
+    "returnCode": "0000",
+    "returnDesc": "交易成功"
+  },
+  "body": {
+    "customerId": "A123456789",
+    "records": [
+      {
+        "branchCode": "00085",
+        "acctNbr": "553366666667",
+        "tranType": "Inward Remittance(In)",
+        "eventDate": "2020/10/23",
+        "item": "-",
+        "currencyCode": "USD",
+        "amounts": 2000,
+        "counterpartyId": "33334444",
+        "counterpartyName": "ZXC Inc.",
+        "snapshotDate": "2020/10/23"
+      },
+      {
+        "branchCode": "00085",
+        "acctNbr": "553366666667",
+        "tranType": "Inward Remittance(Out)",
+        "eventDate": "2020/10/23",
+        "item": "-",
+        "currencyCode": "VND",
+        "amounts": 3500,
+        "counterpartyId": "33334444",
+        "counterpartyName": "QAZ Inc.",
+        "snapshotDate": "2020/10/23"
+      },
+      {
+        "branchCode": "00085",
+        "acctNbr": "553366666667",
+        "tranType": "Inward Remittance",
+        "eventDate": "2020/10/23",
+        "item": "-",
+        "currencyCode": "USD",
+        "amounts": 200,
+        "counterpartyId": "33334444",
+        "counterpartyName": "TAO Inc.",
+        "snapshotDate": "2020/10/23"
+      },
+      {
+        "branchCode": "00085",
+        "acctNbr": "553366666667",
+        "tranType": "Deposit",
+        "eventDate": "2020/10/23",
+        "item": "Time",
+        "currencyCode": "VND",
+        "amounts": 5000,
+        "counterpartyId": "33334444",
+        "counterpartyName": "-",
+        "snapshotDate": "2020/10/23"
+      },
+      {
+        "branchCode": "00085",
+        "acctNbr": "553366666667",
+        "tranType": "Outward Remittance",
+        "eventDate": "2020/10/23",
+        "item": "-",
+        "currencyCode": "ESD",
+        "amounts": 2000,
+        "counterpartyId": "33334444",
+        "counterpartyName": "TAO Inc.",
+        "snapshotDate": "2020/10/23"
+      },
+      {
+        "branchCode": "00085",
+        "acctNbr": "553366666667",
+        "tranType": "Inward Remittance(In)",
+        "eventDate": "2020/10/23",
+        "item": "-",
+        "currencyCode": "USD",
+        "amounts": 2000,
+        "counterpartyId": "33334444",
+        "counterpartyName": "ZXC Inc.",
+        "snapshotDate": "2020/10/23"
+      },
+      {
+        "branchCode": "00085",
+        "acctNbr": "553366666667",
+        "tranType": "Inward Remittance(Out)",
+        "eventDate": "2020/10/23",
+        "item": "-",
+        "currencyCode": "VND",
+        "amounts": 3500,
+        "counterpartyId": "33334444",
+        "counterpartyName": "QAZ Inc.",
+        "snapshotDate": "2020/10/23"
+      },
+      {
+        "branchCode": "00085",
+        "acctNbr": "553366666667",
+        "tranType": "Inward Remittance",
+        "eventDate": "2020/10/23",
+        "item": "-",
+        "currencyCode": "USD",
+        "amounts": 2000,
+        "counterpartyId": "33334444",
+        "counterpartyName": "TAO Inc.",
+        "snapshotDate": "2020/10/23"
+      },
+      {
+        "branchCode": "00085",
+        "acctNbr": "553366666667",
+        "tranType": "Deposit",
+        "eventDate": "2020/10/23",
+        "item": "Time",
+        "currencyCode": "VND",
+        "amounts": 5000,
+        "counterpartyId": "33334444",
+        "counterpartyName": "-",
+        "snapshotDate": "2020/10/23"
+      },
+      {
+        "branchCode": "00085",
+        "acctNbr": "553366666667",
+        "tranType": "Outward Remittance",
+        "eventDate": "2020/10/23",
+        "item": "-",
+        "currencyCode": "ESD",
+        "amounts": 2000,
+        "counterpartyId": "33334444",
+        "counterpartyName": "TAO Inc.",
+        "snapshotDate": "2020/10/23"
+      }
+    ]
+  }
+}
