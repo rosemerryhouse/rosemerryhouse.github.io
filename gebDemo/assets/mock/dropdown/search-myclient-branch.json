@@ -1,0 +1,17 @@
+{
+  "header": {
+    "apId": "CRM-LX-CRM-01",
+    "returnCode": "0000"
+  },
+  "body": {
+    "records": [
+      { "key": "default", "val": "All Branches" },
+      { "key": "branch A1", "val": "Chu Lai" },
+      { "key": "branch B1", "val": "Hong Kong" },
+      { "key": "branch C1", "val": "Labuan" },
+      { "key": "branch A2", "val": "Manila" },
+      { "key": "branch B2", "val": "Singapore" },
+      { "key": "branch C2", "val": "Vientiane" }
+    ]
+  }
+}

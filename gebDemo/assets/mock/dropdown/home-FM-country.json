@@ -1,0 +1,18 @@
+{
+  "header": {
+    "apId": "CRM-LX-CRM-01",
+    "returnCode": "0000"
+  },
+  "body": {
+    "records": [
+      { "key": "manila", "val": "Manila" },
+      { "key": "chulai", "val": "Chu Lai" },
+      { "key": "hk", "val": "Hong Kong" },
+      { "key": "labuan", "val": "Labuan" },
+      { "key": "singapore", "val": "Singapore" },
+      { "key": "head", "val": "Head Office" },
+      { "key": "vientiane", "val": "Vientiane" }
+
+    ]
+  }
+}
