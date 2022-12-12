@@ -1,0 +1,18 @@
+{
+  "header": {
+    "apId": "CRM-LX-CRM-01",
+    "returnCode": "0000"
+  },
+  "body": {
+    "records": [
+      { "val": "Taiwan", "key": "TW" },
+      { "val": "Afghanistan", "key": "AF" },
+      { "val": "Australia", "key": "AU" },
+      { "val": "Austria", "key": "AT" },
+      { "val": "Bangladesh", "key": "BD" },
+      { "val": "Barbados", "key": "BB" },
+      { "val": "Honduras", "key": "HN" },
+      { "val": "Hong Kong", "key": "HK" }
+    ]
+  }
+}

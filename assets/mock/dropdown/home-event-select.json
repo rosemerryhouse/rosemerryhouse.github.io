@@ -1,0 +1,18 @@
+{
+  "header": {
+    "apId": "CRM-LX-CRM-01",
+    "returnCode": "0000"
+  },
+  "body": {
+    "records": [
+      { "key": "default", "val": "All" },
+      { "key": "Remittance", "val": "Remittance" },
+      { "key": "Transfer", "val": "Transfer" },
+      { "key": "Drawdown", "val": "Drawdown" },
+      { "key": "Repayment", "val": "Repayment" },
+      { "key": "Maturity", "val": "Maturity" },
+      { "key": "EWS Alert", "val": "EWS Alert" },
+      { "key": "Review Date", "val": "Review Date" }
+    ]
+  }
+}

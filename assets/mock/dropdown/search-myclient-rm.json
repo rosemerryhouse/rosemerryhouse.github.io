@@ -1,0 +1,17 @@
+{
+  "header": {
+    "apId": "CRM-LX-CRM-01",
+    "returnCode": "0000"
+  },
+  "body": {
+    "records": [
+      { "key": "default", "val": "All RMs" },
+      { "key": "rm A1", "val": "Adam" },
+      { "key": "rm B1", "val": "Balder" },
+      { "key": "rm C1", "val": "Frigg" },
+      { "key": "rm A2", "val": "Odin" },
+      { "key": "rm B2", "val": "Thor" },
+      { "key": "rm C2", "val": "Vidar" }
+    ]
+  }
+}
