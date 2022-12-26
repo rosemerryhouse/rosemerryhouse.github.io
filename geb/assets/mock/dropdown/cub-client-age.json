@@ -1,0 +1,18 @@
+{
+  "header": {
+    "apId": "CRM-LX-CRM-01",
+    "returnCode": "0000"
+  },
+  "body": {
+    "records": [
+      { "val": "Below 3", "key": "default" },
+      { "val": "3 - 5", "key": "y02" },
+      { "val": "6 - 10", "key": "y03" },
+      { "val": "11 - 15", "key": "y04" },
+      { "val": "16 - 20", "key": "y05" },
+      { "val": "21 - 25", "key": "y06" },
+      { "val": "26 - 30", "key": "y07" },
+      { "val": "Above 30", "key": "y08" }
+    ]
+  }
+}
