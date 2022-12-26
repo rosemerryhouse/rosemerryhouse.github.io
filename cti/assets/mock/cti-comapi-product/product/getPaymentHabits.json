@@ -1,0 +1,24 @@
+{
+  "header": {
+    "apId": "CRM-LX-CRM-05",
+    "branchId": "00096",
+    "employeeId": "85847",
+    "clientIp": "127.0.0.1",
+    "role": "1",
+    "roleCode": "ALL",
+    "txnDateTime": "12345678901234",
+    "returnCode": "0000",
+    "returnDesc": "交易成功"
+  },
+  "body": {
+    "customerId": "A123456789",
+    "records": [
+      {
+        "stmtYearMonth": "202108",
+        "txnDate": "20210804",
+        "payChannelTypeDesc": "本行臨櫃",
+        "payAmt": 20000
+      }
+    ]
+  }
+}

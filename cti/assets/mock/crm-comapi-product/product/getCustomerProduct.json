@@ -1,0 +1,109 @@
+{
+  "header": {
+    "apId": "CRM-LX-CRM-05",
+    "branchId": "00096",
+    "employeeId": "85847",
+    "clientIp": "127.0.0.1",
+    "role": "1",
+    "roleCode": "ALL",
+    "txnDateTime": "12345678901234",
+    "returnCode": "0000",
+    "returnDesc": "交易成功"
+  },
+  "body": {
+    "cardCount": "4",
+    "altCardCount": "1",
+    "busCardCount": "0",
+    "othAltCardCount": "1",
+    "progressInd": "N",
+    "upgradeInd": "N",
+    "expirePoints": 1000,
+    "cCDetail": [
+      {
+        "cardNo": "12413201",
+        "cardholderCustId": "A123456789",
+        "cardholderCustName": "李XX",
+        "cardName": null,
+        "kindName": null,
+        "primaryCardInd": "正卡",
+        "customerName": "李XX",
+        "acctOpenDate": "2001/12/03",
+        "creditCardUpgradeInd": null,
+        "cardType": "645",
+        "cardExpireDate": "202612",
+        "comboLinkedSavingAccount": "0012345678991123445"
+      },
+      {
+        "cardNo": "00320718",
+        "cardholderCustId": "A101018230",
+        "cardholderCustName": "錢很多",
+        "cardName": "VISA 長榮極致無限卡",
+        "kindName": "無限卡",
+        "primaryCardInd": "正卡",
+        "customerName": "錢很多",
+        "acctOpenDate": "2019/12/04",
+        "creditCardUpgradeInd": "否",
+        "cardType": "690",
+        "cardExpireDate": "202612",
+        "comboLinkedSavingAccount": "00005555555555555555"
+      },
+      {
+        "cardNo": "00320726",
+        "cardholderCustId": "A201007864",
+        "cardholderCustName": "錢XX",
+        "cardName": null,
+        "kindName": null,
+        "primaryCardInd": "附卡",
+        "customerName": "錢X",
+        "acctOpenDate": "2019/12/04",
+        "creditCardUpgradeInd": null,
+        "cardType": "690",
+        "cardExpireDate": "202612",
+        "comboLinkedSavingAccount": "0000000000000000"
+      }
+    ],
+    "closeDetail": [
+      {
+        "cardNbr": "16222278",
+        "cardName": null,
+        "kindName": null,
+        "primaryCardInd": "附卡",
+        "customerName": "錢X",
+        "acctOpenName": "2006/06/15",
+        "acctCloseDate": "2021/11/22"
+      }
+    ],
+    "pointDetail": [
+      {
+        "category": "小樹點(信用卡)",
+        "totalPoints": 1000,
+        "expiredPoints": 1000
+      },
+      {
+        "category": "多利金",
+        "totalPoints": -50000,
+        "expiredPoints": -50000
+      },
+      {
+        "category": "亞萬里程數",
+        "totalPoints": 274,
+        "expiredPoints": 123
+      },
+      {
+        "category": "長榮哩程數",
+        "totalPoints": 50478,
+        "expiredPoints": 30000
+      }
+    ],
+    "freeGiftDetail": [
+      {
+        "cFirstCardNo": "16551892",
+        "cardName": "",
+        "pid": "1002181Z",
+        "cFirstExpiredDate": "2021/12/02",
+        "cFirstCnt": 4,
+        "cDifferenceCnt": 0
+      }
+    ]
+  }
+}

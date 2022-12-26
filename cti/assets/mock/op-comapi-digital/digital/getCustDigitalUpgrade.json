@@ -1,0 +1,24 @@
+{
+  "header": {
+    "apId": "CRM-LX-CRM-05",
+    "branchId": "00096",
+    "employeeId": "85847",
+    "clientIp": "127.0.0.1",
+    "role": "1",
+    "roleCode": "ALL",
+    "txnDateTime": "12345678901234",
+    "returnCode": "0000",
+    "returnDesc": "交易成功"
+  },
+  "body": {
+    "pinApplyFlag": "Y",
+    "designateFlag": "Y",
+    "nonDesignateFlag": "Y",
+    "sameidFlag": "Y",
+    "dealFlag": "Y",
+    "mixStatementFlag": "Y",
+    "faceCheckApplyFlag": "Y",
+    "phoneBindingFlag": "Y",
+    "faceLevel": null
+  }
+}
